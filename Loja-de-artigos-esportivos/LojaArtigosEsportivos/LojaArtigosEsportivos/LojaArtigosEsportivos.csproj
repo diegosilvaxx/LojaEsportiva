@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1DCC3C3B-FEEB-4D39-BB36-246175C0C7BE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LojaArtigosEsportivos</RootNamespace>
+    <AssemblyName>LojaArtigosEsportivos</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.10.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.10.6\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Screens\Ajuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Ajuda.Designer.cs">
+      <DependentUpon>Ajuda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\CadastroDeCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\CadastroDeCategoria.Designer.cs">
+      <DependentUpon>CadastroDeCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DALGrupo.cs" />
+    <Compile Include="DAL\DALProduto.cs" />
+    <Compile Include="Model\Grupo.cs" />
+    <Compile Include="Model\Produto.cs" />
+    <Compile Include="Screens\TelaCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\TelaCategoria.Designer.cs">
+      <DependentUpon>TelaCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\Conexao.cs" />
+    <Compile Include="Screens\AlterarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\AlterarCliente.Designer.cs">
+      <DependentUpon>AlterarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\AlterarFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\AlterarFornecedor.Designer.cs">
+      <DependentUpon>AlterarFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\AlterarProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\AlterarProduto.Designer.cs">
+      <DependentUpon>AlterarProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\TelaUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\TelaUsuario.Designer.cs">
+      <DependentUpon>TelaUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DALUsuario.cs" />
+    <Compile Include="DAL\DALRelatorio.cs" />
+    <Compile Include="Screens\LocalizaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\LocalizaCliente.Designer.cs">
+      <DependentUpon>LocalizaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\TelaLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\TelaLogin.Designer.cs">
+      <DependentUpon>TelaLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\TelaRelatorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\TelaRelatorio.Designer.cs">
+      <DependentUpon>TelaRelatorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\TelaVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\TelaVenda.Designer.cs">
+      <DependentUpon>TelaVenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\UsuarioSistema.cs" />
+    <Compile Include="Validates\ValidarCamposVenda.cs" />
+    <Compile Include="DAL\DALVenda.cs" />
+    <Compile Include="Screens\CadastroDeCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\CadastroDeCliente.Designer.cs">
+      <DependentUpon>CadastroDeCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\CadastroDeFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\CadastroDeFornecedor.Designer.cs">
+      <DependentUpon>CadastroDeFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\CadastroDeProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\CadastroDeProduto.Designer.cs">
+      <DependentUpon>CadastroDeProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Cliente.cs" />
+    <Compile Include="DAL\DALCliente.cs" />
+    <Compile Include="DAL\DALFornecedor.cs" />
+    <Compile Include="Model\Fornecedor.cs" />
+    <Compile Include="Screens\LocalizarFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\LocalizarFornecedor.Designer.cs">
+      <DependentUpon>LocalizarFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ProdutosVenda.cs" />
+    <Compile Include="Screens\TelaFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\TelaFornecedor.Designer.cs">
+      <DependentUpon>TelaFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\TelaPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\TelaPrincipal.Designer.cs">
+      <DependentUpon>TelaPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Screens\TelaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\TelaCliente.Designer.cs">
+      <DependentUpon>TelaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Validates\ValidarCamposCliente.cs" />
+    <Compile Include="Validates\ValidarCamposFornecedor.cs" />
+    <Compile Include="Screens\TelaProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\TelaProduto.Designer.cs">
+      <DependentUpon>TelaProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\NovaVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\NovaVenda.Designer.cs">
+      <DependentUpon>NovaVenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Venda.cs" />
+    <Compile Include="Validates\ValidarCamposProduto.cs" />
+    <EmbeddedResource Include="Screens\Ajuda.resx">
+      <DependentUpon>Ajuda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\AlterarCliente.resx">
+      <DependentUpon>AlterarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\AlterarFornecedor.resx">
+      <DependentUpon>AlterarFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\AlterarProduto.resx">
+      <DependentUpon>AlterarProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\CadastroDeCategoria.resx">
+      <DependentUpon>CadastroDeCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\CadastroDeCliente.resx">
+      <DependentUpon>CadastroDeCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\CadastroDeFornecedor.resx">
+      <DependentUpon>CadastroDeFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\CadastroDeProduto.resx">
+      <DependentUpon>CadastroDeProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\TelaCategoria.resx">
+      <DependentUpon>TelaCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\TelaUsuario.resx">
+      <DependentUpon>TelaUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\LocalizaCliente.resx">
+      <DependentUpon>LocalizaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\LocalizarFornecedor.resx">
+      <DependentUpon>LocalizarFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\TelaLogin.resx">
+      <DependentUpon>TelaLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\TelaRelatorio.resx">
+      <DependentUpon>TelaRelatorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\TelaFornecedor.resx">
+      <DependentUpon>TelaFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\TelaPrincipal.resx">
+      <DependentUpon>TelaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Screens\TelaCliente.resx">
+      <DependentUpon>TelaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\TelaProduto.resx">
+      <DependentUpon>TelaProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\NovaVenda.resx">
+      <DependentUpon>NovaVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\TelaVenda.resx">
+      <DependentUpon>TelaVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PesquisarBtn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-insert-image-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alterar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Avançar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Avançar1.fw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blue-Abstract-Background-Design.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancelar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Excluir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\INSIRA IMAGEM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\localizar.fw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LUPAPEQUENA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LUPAPEQUENA16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Novo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\primeiro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh-page-arrow-button_icon-icons.com_53909.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sair 50x40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sair.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salvanovo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salvar 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Salvar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Salvar1.fw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ultimo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Voltar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Voltar1.fw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cadeado_login.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\faturas 40x40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus_icon-icons.com_70890.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

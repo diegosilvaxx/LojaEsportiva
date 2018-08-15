@@ -1,0 +1,9 @@
+Codigo fornecido para criacao do Banco esta com a extensão (.sql)
+
+
+E para o primeiro acesso no sistema o usuario de devera usar:
+
+Usuario: admin
+
+
+Senha: admin
